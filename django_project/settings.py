@@ -124,8 +124,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mdeia')
 MEDIA_URL = '/media/'
 
-
-
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
 LOGIN_REDIRECT_URL = 'blog-home'
 LOGIN_URL = 'login'
@@ -138,6 +136,7 @@ except ImportError:
 if not DEBUG:
     SECRET_KEY = os.environ['SECRET_KEY']
     import django_heroku
+
     django_heroku.settings(locals())
 
 db_from_env = dj_database_url.config(conn_max_age=600, ssl_require=True)
