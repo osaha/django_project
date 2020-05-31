@@ -130,8 +130,8 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # below is different
-# STATIC_TMP = os.path.join(BASE_DIR, 'static')
-# os.makedirs(STATIC_TMP, exist_ok=True)
+STATIC_TMP = os.path.join(BASE_DIR, 'static')
+os.makedirs(STATIC_TMP, exist_ok=True)
 
 
 
